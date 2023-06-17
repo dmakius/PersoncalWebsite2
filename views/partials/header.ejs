@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="public/css/styles2.css">
+
+<style>
+  /* Nav Bar */
+.navbar{
+    position: sticky;
+    top: 0px;
+}
+.nav-item a:hover{
+    background-color: #e5e5e5;
+    
+}
+
+.navbar-brand:hover{
+    color: #e5e5e5;
+    
+}
+.navbar-brand::first-letter{
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+nav + h1 {
+    position: sticky;
+}
+
+
+#mobile-promp{
+    display : block;   
+    margin : auto;
+    display:none;
+}
+
+</style>
+<div class="row fixed-top">
+  <nav class="navbar navbar-dark bg-dark " style = 'padding:20px 20px 20px 20px;'>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><h2>DM| My Personal Website</h2></a>     
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <% if(loggedIn == false){ %>
+            <li class="nav-item"><a class="nav-item nav-link" href="/Sketches">Sketches</a></li>
+            <li class="nav-item"><a class="nav-item nav-link" href="/Paintings">Paintings</a></li>
+            <li class="nav-item"><a class="nav-item nav-link" href="/Mario">Games</a></li>
+            <!-- <li class="nav-item"><a class="nav-item nav-link" href="/login">Login</a></li> -->
+            <% }else{ %>
+            <!-- <li class="nav-item"><a class="nav-item nav-link" href="/Admin">Admin</a> </li> -->
+            <% } %>
+          </ul>
+          </div>
+    </div>
+  </nav>
+</div>
+

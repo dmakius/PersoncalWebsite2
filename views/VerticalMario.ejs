@@ -1,0 +1,70 @@
+<html>
+<head>
+  <%- include('./partials/head'); %>
+  <title>Vertical Mario</title>
+
+  <% if(mobile){ %>
+    <meta name="viewport" content="user-scalable=no,target-densitydpi=device-dpi" />
+  <% } %>
+
+  <!-- JQUERY -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+
+  <!-- Game Scripts -->
+  <script src = "public/VerticalMario/js/phaser.min.js"></script>
+  <script src = "public/VerticalMario/js/bootState.js"></script>
+  <script src = "public/VerticalMario/js/preloadState.js"></script>
+  <script src = "public/VerticalMario/js/MenuState.js"></script>
+  <script src = "public/VerticalMario/js/ScoreState.js"></script>
+  <script src = "public/VerticalMario/js/GameState.js"></script>
+  <script src = "public/VerticalMario/js/InputScore.js"></script>
+  <script src = "public/VerticalMario/js/prefabs/Mario.js"></script>
+  <script src = "public/VerticalMario/js/prefabs/InitPlatforms.js"></script>
+  <script src = "public/VerticalMario/js/prefabs/platforms.js"></script>
+  <script src = "public/VerticalMario/js/prefabs/Goomba.js"></script>
+  <script src = "public/VerticalMario/js/prefabs/Coin.js"></script>
+  <script src = "public/VerticalMario/js/prefabs/Spiny.js"></script>
+  <script src = "public/VerticalMario/js/prefabs/Koopa.js"></script>
+  
+</head>
+<body style="width:100%">
+  <%- include('./partials/header'); %>
+  <%- include('./partials/flashmessages'); %>
+  <div class="container" style= "margin-top:100px;">
+    <div class="row">
+      <br>
+      <div id="verticalMario" style="margin-top:20px;">
+        <input id="mobile-promp" type="text" name="mobile-promp">
+      </div>
+      <script>
+        var VerticalMario = VerticalMario || {};
+        VerticalMario.game = new Phaser.Game(700, 500, Phaser.AUTO,'verticalMario');
+        VerticalMario.game.state.add('BootState', VerticalMario.BootState);
+        VerticalMario.game.state.add('PreloadState', VerticalMario.PreloadState);
+        VerticalMario.game.state.add('MenuState', VerticalMario.MenuState);
+        VerticalMario.game.state.add('GameState', VerticalMario.GameState);
+        VerticalMario.game.state.add('InputScoreState', VerticalMario.InputScoreState);
+        VerticalMario.game.state.add('ScoreState', VerticalMario.ScoreState);
+        VerticalMario.game.state.start('BootState');
+
+        var pause = false, startGame = false, movingRight = false, movingLeft = false;
+	      var playerJump = false, alreadDead = false; var globalScore = 0; var mobileGame = false;
+      </script>
+    </div>
+
+    <% if(mobile){ %>
+      
+      <%- include('./partials/score_modal'); %>
+      <%- include('./partials/controller'); %>
+      
+      <link rel="stylesheet" href="public/css/mobile-styles.css">
+      <link rel="stylesheet" href="public/css/controller.css">
+      <script> mobileGame = true; </script>
+   <% } %>
+
+  </div>
+</body>
+</html>

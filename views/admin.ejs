@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    
+<title>Admin</title>
+<% if(mobile){ %>
+    <meta name="viewport" content="user-scalable=no,target-densitydpi=device-dpi" />
+  <% } %>
+<%- include('./partials/head'); %>
+</head>
+<body>
+    <%- include('./partials/header'); %>
+    <%- include('./partials/flashmessages'); %>
+    <div class="container">
+        <div class="row">
+            <br>
+            <h1 style="text-align:center;" id ='PageTitle'><b>Score Administration Page</b></h1>
+            <br>
+            <hr>
+           
+            <div id="myList">
+                <% sortedScores.forEach(score => {%>
+                    <div id ="div_<%- score._id %>">
+                    <div class="row">
+                        <div class="col">
+                            <label for="username"><b>NAME:</b></label>
+                            <input type='text' name="username" class='form-control' id="username_<%- score._id %>" value="<%- score.name %>">
+                            <br><br>
+                            <label for="score"><b>SCORE:</b></label>
+                            <input type='text' name="score" class='form-control'  id="score_<%- score._id %>" value="<%- score.score %>">  
+                        </div>
+                        <div class="col">
+                            <button id="<%- score._id %>" type="button" class='edit btn btn-info'>EDIT</button>
+                            <button id="<%- score._id %>" type="button" class='delete btn btn-danger'>DELETE</button>
+                        </div>    
+                    </div>
+                </div>
+                <% })%>                           
+                
+            </div>
+        </div>
+    </div>
+   <script type="module">
+        import Admin from  "../public/js/admin.js";
+      
+        $(".edit.btn.btn-info").on("click", function (index, element) {
+                Admin.updateID(index.currentTarget.id);
+        });
+        $(".delete.btn.btn-danger").on("click", function (index, element) {
+                Admin.deleteID(index.currentTarget.id);
+        });
+        
+       
+       
+   </script>
+</body>

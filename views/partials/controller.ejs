@@ -1,0 +1,51 @@
+<br>
+<div  id="controller">
+	<div class = "row">
+		<div class= "col-xs-6 col-sm-6">
+			<table>
+				<tr>
+					<td></td>
+					<td><button class = "roundButton" id = "upBtn"><span>&#x2191</span></button></td>
+					<td></td>	
+				</tr>
+				<tr>
+					<td><button class = "roundButton" id = "leftBtn"><span>&#8592</span></button></td>
+					<td></td>
+					<td><button class = "roundButton" id = "rightBtn"><span>&#8594</span></button></td>
+				</tr>
+				<tr>
+						<td></td>
+						<td><button class = "roundButton" id = "downBtn"><span>&#8595</span></button></td>
+						<td></td>
+				</tr> 
+			</table>
+		</div>
+				
+		<div class = "col-xs-6 col-sm-6">
+				<button id = "shootBtn"><span>A</span></button>
+		</div>
+	</div>
+
+	<br>
+	<div class = "row">
+		<div class = "col-xs-4 col-sm-4"></div>
+		<div class = "col-xs-4 col-sm-4">
+			<div id = "startBtn"  class = "btn btn-primary">
+				<span id = "startText">Start</span>
+		</div>
+		<div class = "col-xs-4 col-sm-4"></div>
+	</div>	
+</div>
+
+<script type="module">
+	import Controller from "../../public/js/controller.js"
+	Controller.preventLongPressMenu(document.getElementsByTagName('upBtn'));
+	Controller.preventLongPressMenu(document.getElementsByTagName('leftBtn'));
+	Controller.preventLongPressMenu(document.getElementsByTagName('rightBtn'));
+	Controller.preventLongPressMenu(document.getElementsByTagName('downBtn'));
+	Controller.preventLongPressMenu(document.getElementsByTagName('shootBtn'));
+	Controller.rightButtonOn();
+	Controller.leftButtonOn();
+	Controller.shootBottonOn();
+	Controller.startBottonOn();
+</script>

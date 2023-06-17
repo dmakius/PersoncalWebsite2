@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="public/css/modal.css">
+
+<div id="myModal" class="modal">
+       <!-- Modal content -->
+    <div class="modal-content">
+      <h1 style="text-align: center;">Submit your Score</h1>
+      <label for="modal-username">USERNAME</label>
+      <input type="'text" id="modal-username" class="form-control" required>
+      <br>
+      <h2>Score: <span id="modal-score"></span></h2>
+      <button class="btn btn-primary" onclick="modalSend()"> Add Username</button>
+    </div>
+  
+</div>
+
+<script>
+
+  function modalSend(){
+    var value = $("#modal-username").val();
+    $("#modal-username").val("");
+    VerticalMario.InputScoreState.username.setText(value);
+    $('.modal').css("display", "none");
+  }
+ 
+</script>
+  

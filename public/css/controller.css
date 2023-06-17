@@ -1,0 +1,96 @@
+#controller{
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
+    margin-top:25px;
+    padding:25px;
+    border-radius: 15%;
+}
+
+/* Directional Pad */
+#controller > .row{
+    margin:15px;
+}
+
+tbody > tr:first-of-type > td:first-of-type + td{
+    background-color:#eee8e8;
+    border-radius: 20%;
+
+}
+
+tbody > tr:nth-child(2) >  td:first-of-type{
+    background-color:#eee8e8;
+    border-radius: 30%;
+}
+
+tbody > tr:nth-child(2) >  td:first-of-type + td{
+    background-color:#eee8e8;
+    border-radius: 50%;
+   
+}
+
+tbody > tr:nth-child(2) >  td:last-child{
+    background-color:#eee8e8;
+    border-radius: 30%;
+}
+
+tbody > tr:last-child>  td:nth-child(2){
+    background-color:#eee8e8;
+    border-radius: 30%;
+}
+
+/* Buttons */
+.roundButton{
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
+      box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
+}
+.roundButton:hover, .roundButton:active {
+    background-color:#aaa;
+}
+.roundButton span:hover {
+    opacity: 0.5;
+}
+
+.roundButton span{
+    font-size: 50px;
+    font-weight: bold;
+}
+.roundButton span{
+    font-family: monospace;
+    font-size:72px ;
+}
+
+/* Shoot Button */
+#shootBtn{
+	display:block;
+	margin:auto;
+    float:right; 
+    margin-top:20px;
+    border-radius: 100px;
+    height:175px;
+    width:175px;
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
+}
+#shootBtn span{
+    font-size: 75px;
+    font-weight: bold;
+}
+#shootBtn:hover,#shootBtn:active {
+    background-color:#aaa;
+}
+#shootBtn span:hover {
+    opacity: 0.5;
+}
+
+/* start button */
+#startBtn{
+    display:block; 
+    margin:auto;
+    height: 100px;
+    font-size: 45px;
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
+}
+
+#startBtn:hover #startBtn:active{
+    border:1px solid black;
+}
