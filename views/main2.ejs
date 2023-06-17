@@ -4,6 +4,9 @@
     <%- include('./partials/head'); %>
     <title>MAIN</title>
 	<!-- Font-Awesome -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="public/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link href="public/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     
@@ -30,7 +33,7 @@
         margin:0;
         padding:0;
         opacity:0.5;
-        color: #E04343;
+        color: #4360e0;
         letter-spacing: 18px;
         line-height: 50px;
         text-transform: uppercase;
@@ -116,16 +119,7 @@
                     background: rgba(255, 232, 0, 1);
                     color: #439ee0;
                 }
-                .footer a {
-                    color:#a1a9b0;
-            }
-            .footer {
-                    background-color:#f3f5f8;
-                    padding:40px 0 30px;
-            }
-            .footer p {
-                    color: #808080;
-            }
+              
             .color-bg {
 	            background:#4387e0;
             }
@@ -155,6 +149,36 @@
             .color-bg h6, .color-bg p {
                 color: white;
             }
+
+            @media screen and (max-width: 500px) {
+            .column-flex {
+            flex: 50%;
+            max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 501px ) and (max-width: 800px) {
+            .column-flex {
+            flex: 33%;
+            max-width: 33%;
+            }
+        }
+
+    @media only screen and (max-width: 500px) {
+        nav {
+        flex-direction: column;
+        }
+        nav ul {
+        flex-direction: column;
+        padding-top: 0.5rem;
+        }
+        nav li {
+        padding: 0.5rem 0;
+        }
+        nav h1{
+        text-align: center;
+        }
+    } 
     </style>
     <link href="public/assets/textrotator/simpletextrotator.css" rel="stylesheet">
     <script src="public/assets/textrotator/jquery.simple-text-rotator.js"></script>
@@ -164,60 +188,41 @@
   </head>
   <body>
     <%- include('./partials/header'); %>
-    
-        <div class="row" style="margin-top: 75px;">
-            <div class="col-md-12" style="background: url('../../public/assets/img/header-bg.jpg') right bottom no-repeat; background-size: contain;padding:110px 0 100px 0; height:auto;
-            	background-color: #EDECE7">
-              <h1 class="animated fadeInDown">
+    <div class="row" style="margin-top: 75px;">
+        <div class="col-md-12" style="background: url('../../public/assets/img/header-bg.jpg') right bottom no-repeat; background-size: contain;padding:110px 0 100px 0; height:auto;
+                    background-color: #EDECE7">
+            <h1 class="animated fadeInDown">
                 <span style="opacity:0.5"><span style="color:#4365e0;opacity:0.5">Dani</span>el<br/></span>
                 <span style="opacity:0.5">Mak<span style="color:#00ccff">over</span></span>
-              </h1>
-              <h3 class="animated fadeInUp delay-05s" style="opacity:0.5; margin-left:10px;"><span class="rotate">
-                Software Engineer, UX Artist, Video Game Geveloper</span></h3>
-            </div>
-           
-        </div>
+            </h1>
+            <h3 class="animated fadeInUp delay-05s" style="opacity:0.5; margin-left:10px;"><span class="rotate">
+                    Software Engineer, UX Artist, Video Game Geveloper</span></h3>
+        </div>       
+    </div>
 
-        <style>
-            
-        </style>
-
-            <div class="row">
-              <div class="container intro text-center section-padding color-bg" id="about">
-                <div class="col-md-12">
-                    <h1 class="arrow"><span>about me</span></h1>
-                  <p>
+    <div class="row">
+        <div class="container intro text-center section-padding color-bg" id="about">
+            <div class="col-md-12">
+                <h1 class="arrow"><span>about me</span></h1>
+                <p>
                     I am a Software developer based in Boston. I have over 5 years of professional experience and a Masters Degree in Computer Science.
                     I enjoy building full stack applications for both Mobile and Web platforms. I have also built a number of 2D video games in Javascript. 
                     When I am not coding on a project I am painting, sketching, traveling, and taking care of stray cats.
                 </p>
-                </div>
-              </div>
-            </div>
-
-            <style>
-               
-            </style>
-
-           
-
-
-        <div class="row">
-            <div class="col-md-12" style="padding:25px;">
-
-                <ul class="social-buttons mx-auto text-center">
-                    <li><a href="https://github.com/CS683/lab-projectportal-dmakius" class="social-btn"><i class="fa fa-github"></i></a></li><!-- twitter -->
-                    <li><a href="https://www.linkedin.com/in/daniel-makover-932962a4/" class="social-btn"><i class="fa fa-linkedin"></i></a></li><!-- facebook -->
-                </ul>
             </div>
         </div>
+    </div>
 
-
-        <div class="row footer">
-            <div class="col-md-12 text-center">
-                <p>Powered By HaShem. &copy; 2023</a>
-            </div>
+    <div class="row">
+        <div class="col-md-12" style="padding:25px;">
+            <ul class="social-buttons mx-auto text-center">
+                <li><a href="https://github.com/CS683/lab-projectportal-dmakius" class="social-btn"><i class="fa fa-github"></i></a></li><!-- twitter -->
+                <li><a href="https://www.linkedin.com/in/daniel-makover-932962a4/" class="social-btn"><i class="fa fa-linkedin"></i></a></li><!-- facebook -->
+            </ul>
         </div>
+    </div>
+
+    <%- include('./partials/footer'); %>
         <script src="public/assets/bootstrap/js/bootstrap.min.js"></script> 
 
         <script type="text/javascript">
@@ -227,7 +232,6 @@
               speed: 2000 // How many milliseconds until the next word show.
             });
         </script>
-
   </body>
 
 

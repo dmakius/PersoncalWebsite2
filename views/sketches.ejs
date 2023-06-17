@@ -148,6 +148,90 @@ img.grayscale:hover {
 
 
     </style>
+    <style>
+        .container-flex{
+            margin-top:15px;
+        }
+
+
+        .heading-text-flex span{
+            font-weight: 100;
+        }
+
+        .image-gallery-flex{    
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        
+        .column-flex {
+            box-sizing: border-box;
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column-flex img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            -webkit-filter: grayscale(1);
+        }
+
+        .column-flex img:hover {
+            -webkit-filter: none;
+        }
+
+        @media screen and (max-width: 500px) {
+            .column-flex {
+            flex: 50%;
+            max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 501px ) and (max-width: 800px) {
+            .column-flex {
+            flex: 33%;
+            max-width: 33%;
+            }
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            nav {
+            flex-direction: column;
+            }
+            nav ul {
+            flex-direction: column;
+            padding-top: 0.5rem;
+            }
+            nav li {
+            padding: 0.5rem 0;
+            }
+            nav h1{
+            text-align: center;
+            }
+        } 
+        img{
+            border:1px solid black;
+        }
+
+        h1{
+            height:100px;
+        }
+        h1.arrow {
+                font-size: 26px;
+                text-transform:uppercase;
+                color:#353535;
+                letter-spacing: 4px;
+                background:url('../../public/assets/img/h1-bg.png') no-repeat center bottom;
+                font-weight: bold;
+            }
+            
+            h1.arrow span {
+                color: #314ba8;
+            }
+    </style>
 </head>
 <body>
   <%- include('./partials/header'); %>
@@ -161,106 +245,59 @@ img.grayscale:hover {
     </div>
   </section>
 
-  <div class="container">
-    <div class="row row-offset-0">
-             
-    <!-- PORTFOLIO ITEM 1 -->
-    <div class="col-md-3 col-sm-6">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
+    <div class="container-flex">
+        <div class="image-gallery-flex">
+            <div class="column-flex">
                 <a href="public/assets/img/sketches/sketch_1.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_1.jpg" alt="Portfolio Item">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_1.jpg' alt="painting 1">
                 </a>
-            </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
-
-    <!-- PORTFOLIO ITEM 2 -->
-    <div class="col-md-3 col-sm-6">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
                 <a href="public/assets/img/sketches/sketch_2.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_2.jpg" alt="Portfolio Item">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_2.jpg' alt="painting 1">
                 </a>
-            </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
-                
-    <!-- PORTFOLIO ITEM 3 -->
-    <div class="col-md-3 col-sm-6">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
                 <a href="public/assets/img/sketches/sketch_3.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_3.jpg" alt="Portfolio Item">
-                </a>            </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_4.jpg' alt="painting 1">
+                </a>
                 
-    <!-- PORTFOLIO ITEM 4 -->
-    <div class="col-md-3 col-sm-6 ">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
-                <a href="public/assets/img/sketches/sketch_4.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_4.jpg" alt="Portfolio Item">
-                </a>            </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
-             
-    <!-- PORTFOLIO ITEM 5 -->
-    <div class="col-md-3 col-sm-6 ">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
+            </div>
+            <div class="column-flex">
                 <a href="public/assets/img/sketches/sketch_5.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_5.jpg" alt="Portfolio Item">
-                </a>            </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
-
-    <!-- PORTFOLIO ITEM 6 -->
-    <div class="col-md-3 col-sm-6">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_5.jpg' alt="painting 1">
+                </a>
                 <a href="public/assets/img/sketches/sketch_6.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_6.jpg" alt="Portfolio Item">
-                </a>            </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
-                
-    <!-- PORTFOLIO ITEM 7 -->
-    <div class="col-md-3 col-sm-6">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_6.jpg' alt="painting 1">
+                </a>
+                <a href="public/assets/img/sketches/sketch_13.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_13.jpg' alt="painting 1">
+                </a>
+               
+            </div>
+            <div class="column-flex">
+                <a href="public/assets/img/sketches/sketch_9.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_9.jpg' alt="painting 1">
+                </a>
+                <a href="public/assets/img/sketches/sketch_10.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_1.jpg' alt="painting 1">
+                </a>
+                <a href="public/assets/img/sketches/sketch_11.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_11.jpg' alt="painting 1">
+                </a>
+                    
+             </div>
+             <div class="column-flex">
+                <a href="public/assets/img/sketches/sketch_12.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_12.jpg' alt="painting 1">
+                </a>
                 <a href="public/assets/img/sketches/sketch_7.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_7.jpg" alt="Portfolio Item">
-                </a>            </div>
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_7.jpg' alt="painting 1">
+                </a>
+                <a href="public/assets/img/sketches/sketch_4.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                    <img id="myImg" src ='public/assets/img/sketches/sketch_4.jpg' alt="painting 1">
+                </a>
+             </div>
         </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
-                
-    <!-- PORTFOLIO ITEM 8 -->
-    <div class="col-md-3 col-sm-6">
-        <div class="overlay-effect effects clearfix">
-            <div class="img">
-                <a href="public/assets/img/sketches/sketch_8.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
-                    <img class="grayscale" src="public/assets/img/sketches/sketch_8.jpg" alt="Portfolio Item">
-                </a>            </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO ITEM END -->
-  </div><!--/row-->
-</div><!--/.container-->
-  <!-- ==========================
-  PORTFOLIO SECTION END
-  =========================== -->
-
-    <!-- Lightbox.js -->
+   
     <script src="public/assets/lightbox/js/lightbox.min.js"></script>
 </div>
+<%- include('./partials/footer'); %>
 </body>
 </html>

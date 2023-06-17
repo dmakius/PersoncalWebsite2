@@ -2,9 +2,190 @@
 <head>
   <%- include('./partials/head'); %>
   <title>DM|Paintings</title>
+    	<!-- Lightbox -->
+  <link href="public/assets/lightbox/css/lightbox.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <style>
+            h1.arrow {
+                font-size: 26px;
+                text-transform:uppercase;
+                color:#353535;
+                letter-spacing: 4px;
+                background:url('../../public/assets/img/h1-bg.png') no-repeat center bottom;
+                font-weight: bold;
+            }
+            
+            h1.arrow span {
+                color: #314ba8;
+            }
+
+    .container-flex{
+        margin-top:15px;
+    }
+
+
+    .heading-text-flex span{
+        font-weight: 100;
+    }
+
+    .image-gallery-flex{    
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    
+    .column-flex {
+        box-sizing: border-box;
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+
+    .column-flex img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        -webkit-filter: grayscale(1);
+    }
+
+    .column-flex img:hover {
+        -webkit-filter: none;
+    }
+
+    @media screen and (max-width: 500px) {
+        .column-flex {
+        flex: 50%;
+        max-width: 50%;
+        }
+    }
+
+    @media screen and (min-width: 501px ) and (max-width: 800px) {
+        .column-flex {
+        flex: 33%;
+        max-width: 33%;
+        }
+    }
+
+
+    @media only screen and (max-width: 500px) {
+        nav {
+        flex-direction: column;
+        }
+        nav ul {
+        flex-direction: column;
+        padding-top: 0.5rem;
+        }
+        nav li {
+        padding: 0.5rem 0;
+        }
+        nav h1{
+        text-align: center;
+        }
+    } 
+    img{
+        border:1px solid black;
+    }
+    
+    h1{
+      height:50px;
+    }
+
+</style>
 </head>
 <body>
   <%- include('./partials/header'); %>
+
+  <div class="swag text-center" id="portfolio" style="margin-top:100px;" >
+    <div class="container"  >
+      <!-- Headline -->
+      <div class="row">
+        <div class="col-md-12">
+        <h1 class="arrow"><span>Paintings</span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-flex">
+    <div class="image-gallery-flex">
+        <div class="column-flex">
+            <a href="public/assets/img/paintings/painting_1.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_1.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_2.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_2.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_3.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_4.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_12.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+              <img id="myImg" src ='public/assets/img/paintings/painting_12.jpg' alt="painting 1">
+              
+          </a>
+          <a href="public/assets/img/paintings/painting_13.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+            <img id="myImg" src ='public/assets/img/paintings/painting_13.jpg' alt="painting 1">
+        </a>
+        </div>
+        <div class="column-flex">
+            <a href="public/assets/img/paintings/painting_4.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_5.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_5.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_6.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_6.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_13.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_18.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+              <img id="myImg" src ='public/assets/img/paintings/painting_18.jpg' alt="painting 1">
+          </a>
+          <a href="public/assets/img/paintings/painting_19.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+            <img id="myImg" src ='public/assets/img/paintings/painting_19.jpg' alt="painting 1">
+        </a>
+        <a href="public/assets/img/paintings/painting_20.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+          <img id="myImg" src ='public/assets/img/paintings/painting_20.jpg' alt="painting 1">
+      </a>
+        </div>
+        <div class="column-flex">
+            <a href="public/assets/img/paintings/painting_7.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_7.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_9.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_9.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_8.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_8.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_14.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+              <img id="myImg" src ='public/assets/img/paintings/painting_14.jpg' alt="painting 1">
+          </a>
+          <a href="public/assets/img/paintings/painting_15.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+            <img id="myImg" src ='public/assets/img/paintings/painting_15.jpg' alt="painting 1">
+        </a>
+                
+         </div>
+         <div class="column-flex">
+
+            <a href="public/assets/img/paintings/painting_10.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_10.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_11.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+                <img id="myImg" src ='public/assets/img/paintings/painting_11.jpg' alt="painting 1">
+            </a>
+            <a href="public/assets/img/paintings/painting_16.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+              <img id="myImg" src ='public/assets/img/paintings/painting_16.jpg' alt="painting 1">
+          </a>
+          <a href="public/assets/img/paintings/painting_17.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum">
+            <img id="myImg" src ='public/assets/img/paintings/painting_17.jpg' alt="painting 1">
+        </a>
+         </div>
+    </div>
+
 </div>
+<script src="public/assets/lightbox/js/lightbox.min.js"></script>
+<%- include('./partials/footer'); %>
+
 </body>
 </html>

@@ -2,9 +2,13 @@
 <head>
   <%- include('./partials/head'); %>
   <title>Vertical Mario</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <% if(mobile){ %>
     <meta name="viewport" content="user-scalable=no,target-densitydpi=device-dpi" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
   <% } %>
 
   <!-- JQUERY -->
@@ -28,9 +32,41 @@
   <script src = "public/VerticalMario/js/prefabs/Coin.js"></script>
   <script src = "public/VerticalMario/js/prefabs/Spiny.js"></script>
   <script src = "public/VerticalMario/js/prefabs/Koopa.js"></script>
+
+
   
 </head>
 <body style="width:100%">
+  <style>
+      @media screen and (max-width: 500px) {
+            .column-flex {
+            flex: 50%;
+            max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 501px ) and (max-width: 800px) {
+            .column-flex {
+            flex: 33%;
+            max-width: 33%;
+            }
+        }
+    @media only screen and (max-width: 500px) {
+     nav {
+     flex-direction: column;
+     }
+     nav ul {
+     flex-direction: column;
+     padding-top: 0.5rem;
+     }
+     nav li {
+     padding: 0.5rem 0;
+     }
+     nav h1{
+     text-align: center;
+     }
+ } 
+</style>
   <%- include('./partials/header'); %>
   <%- include('./partials/flashmessages'); %>
   <div class="container" style= "margin-top:100px;">
@@ -66,5 +102,6 @@
    <% } %>
 
   </div>
+  <%- include('./partials/footer'); %>
 </body>
 </html>
